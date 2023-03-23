@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+    <!-- Navbar Start -->
+
+    <div class="container-fluid">
+        <div class="d-inline-flex">
+                <p class="m-0"><a href="/">Home</a></p>
+                <p class="m-0 px-2">></p>
+                <p class="m-0">Register</p>
+        </div>
+<!--        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 100px">-->
+<!--            <h4 class="font-weight-semi-bold text-uppercase mb-3">Login</h4>-->
+<!--        </div>-->
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Cart Start -->
+    <div class="container-fluid pt-1">
+        <div class="d-flex flex-column align-items-center justify-content-center">
+            <div class="col-lg-4">
+                <div class="card border-secondary mb-5">
+                    <form method="post">
+                        {% csrf_token %}
+                    <div class="card-header bg-secondary border-0">
+                        <h4 class="font-weight-semi-bold m-0" align="center">Register</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <h6 class="font-weight-medium">First Name</h6><br>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3 pt-1">
+                            <input type="text" name="firstname" placeholder="First name" style="width:100%;">
+                        </div>
+
+                        <div class="d-flex">
+                            <h6 class="font-weight-medium">Last Name</h6><br>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3 pt-1">
+                            <input type="text" name="lastname" placeholder="Last name" style="width:100%;">
+                        </div>
+
+                        <div class="d-flex">
+                            <h6 class="font-weight-medium">Email</h6><br>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3 pt-1">
+                            <input type="email" name="email" placeholder="Email address" style="width:100%;">
+                        </div>
+
+                        <div class="d-flex">
+                            <h6 class="font-weight-medium">Phone Number</h6><br>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3 pt-1">
+                            <input type="text" name="phone" placeholder="Phone number" style="width:100%;">
+                        </div>
+
+                        <div class="d-flex">
+                            <h6 class="font-weight-medium">Address Line 1</h6><br>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3 pt-1">
+                            <input type="text" name="address1" placeholder="Address line 1" style="width:100%;">
+                        </div>
+
+                        <div class="d-flex">
+                            <h6 class="font-weight-medium">Address Line 2</h6><br>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3 pt-1">
+                            <input type="text" name="address2" placeholder="Address line 2" style="width:100%;">
+                        </div>
+
+                        <div class="d-flex">
+                            <h6 class="font-weight-medium">City</h6><br>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3 pt-1">
+                            <input type="text" name="city" placeholder="City" style="width:100%;">
+                        </div>
+
+                        <div class="d-flex">
+                            <h6 class="font-weight-medium">Postal Code</h6><br>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3 pt-1">
+                            <input type="text" name="postalcode" placeholder="Postal code" style="width:100%;">
+                        </div>
+
+                        <div class="d-flex">
+                            <h6 class="font-weight-medium">State</h6><br>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3 pt-1">
+                            <input type="text" name="state" placeholder="State" style="width:100%;">
+                        </div>
+
+                        <div class="d-flex">
+                            <h6 class="font-weight-medium">Country</h6><br>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3 pt-1">
+                            <select name="contry" style="width:100%;">
+                                <option selected>India</option>
+                                <option>Bhutan</option>
+                                <option>Nepal</option>
+                                <option>Sri Lanka</option>
+                            </select>
+                        </div>
+
+                        <div class="d-flex">
+                            <h6 class="font-weight-medium">Username</h6><br>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3 pt-1">
+                            <input type="text" name="username" placeholder="Username" style="width:100%;">
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-medium">Password</h6>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3 pt-1">
+                            <input type="password" name="password1" placeholder="Password" style="width:100%;">
+                        </div>
+
+                         <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-medium">Confirm Password</h6>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3 pt-1">
+                            <input type="password" name="password2" placeholder="Retype password" style="width:100%;">
+                        </div>
+                    </div>
+                    <div class="card-footer border-secondary bg-transparent">
+                        <a href="cart/checkout">
+                        <button type="submit" class="btn btn-block btn-primary my-3 py-3">Register</button>
+                        </a>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Cart End -->
+
+{% endblock %}
